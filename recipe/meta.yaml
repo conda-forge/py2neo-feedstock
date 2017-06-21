@@ -34,9 +34,6 @@ test:
     - py2neo.ext.batman
     - py2neo.ext.calendar
     - py2neo.packages
-  commands:
-    - py2neo >/dev/null
-    - neokit >/dev/null
 
 about:
   home: http://py2neo.org/

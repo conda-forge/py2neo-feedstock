@@ -1,6 +1,6 @@
 {% set name='py2neo' %} 
-{% set version='3.1.2' %}
-{% set sha256='8177a9b2c4d23a3ce26f02d3d6be92ac49cb7520e88ec1b41d8c6e86774938b8' %}
+{% set version='4.0.0b2' %}
+{% set sha256='a0635295a4399ae8023b6515c96ee6b2662bf682164277feb0a198e4f92cff7b' %}
 
 package:
   name: {{ name }}
@@ -10,6 +10,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # patch to fix writing to the console in unicode in python2/3 friendly way
+    - console.patch
 
 build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -23,17 +26,24 @@ requirements:
   build:
     - python
     - setuptools
+    - neo4j-python-driver ==1.1.0rc1
+    - urllib3
   run:
     - python
+    - neo4j-python-driver ==1.1.0rc1
+    - urllib3
 
 test:
   imports:
     - py2neo
-    - py2neo.database
     - py2neo.ext
-    - py2neo.ext.batman
     - py2neo.ext.calendar
-    - py2neo.packages
+    - py2neo.cli
+    - py2neo.cypher
+  commands:
+    - echo '/exit' |py2neo 2>&1|grep Py2neo >/dev/null  # [not win]
+    # neokit broken in py2neo 4.0.0b2
+    # - neokit
 
 about:
   home: http://py2neo.org/

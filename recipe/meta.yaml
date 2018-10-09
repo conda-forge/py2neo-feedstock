@@ -20,7 +20,7 @@ build:
     - py2neo = py2neo.cli.tool:main
     - neokit = neokit:main
     - geoff = py2neo.ext.geoff.__main__:main
-  number: 0
+  number: 1000
 
 requirements:
   build:

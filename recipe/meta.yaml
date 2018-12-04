@@ -18,32 +18,38 @@ build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - py2neo = py2neo.cli.tool:main
-    - neokit = neokit:main
-    - geoff = py2neo.ext.geoff.__main__:main
   number: 0
 
 requirements:
   build:
     - python
-    - setuptools
-    - neo4j-python-driver ==1.1.0rc1
-    - urllib3
+    - click>=2.0
+    - colorama
+    - neo4j-driver>=1.6.2,<1.7
+    - neotime==1.0.0
+    - prompt_toolkit==1.0.15
+    - pygments>=2.0
+    - urllib3[secure]<1.23,>=1.21.1
   run:
     - python
-    - neo4j-python-driver ==1.1.0rc1
-    - urllib3
-
+    - click>=2.0
+    - colorama
+    - neo4j-driver>=1.6.2,<1.7
+    - neotime==1.0.0
+    - prompt_toolkit==1.0.15
+    - pygments>=2.0
+    - urllib3[secure]<1.23,>=1.21.1
 test:
   imports:
     - py2neo
-    - py2neo.ext
-    - py2neo.ext.calendar
-    - py2neo.cli
     - py2neo.cypher
+    - py2neo.data
+    - py2neo.database
+    - py2neo.matching
+    - py2neo.ogm
   commands:
     - echo '/exit' |py2neo 2>&1|grep Py2neo >/dev/null  # [not win]
-    # neokit broken in py2neo 4.0.0b2
-    # - neokit
+
 
 about:
   home: http://py2neo.org/

@@ -25,20 +25,20 @@ requirements:
     - python
     - click >=2.0
     - colorama
-    - neo4j-driver >=1.6.2,<1.7
+    - neo4j-python-driver >=1.6.2,<1.7
     - neotime ==1.0.0
     - prompt_toolkit ==1.0.15
     - pygments >=2.0
-    - urllib3[secure] <1.23,>=1.21.1
+    - urllib3 <1.23,>=1.21.1
   run:
     - python
     - click >=2.0
     - colorama
-    - neo4j-driver >=1.6.2,<1.7
+    - neo4j-python-driver >=1.6.2,<1.7
     - neotime ==1.0.0
     - prompt_toolkit ==1.0.15
     - pygments >=2.0
-    - urllib3[secure] <1.23,>=1.21.1
+    - urllib3 <1.23,>=1.21.1
 test:
   imports:
     - py2neo

@@ -12,14 +12,13 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  script: python -m pip install . --no-deps -vv
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - py2neo = py2neo.__main__:main
   number: 0
 
 requirements:
   build:
-    - python
     - click >=7.0
     - colorama
     - neobolt <1.8,>=1.7.3
@@ -28,6 +27,7 @@ requirements:
     - pygments >=2.3.0,<2.4
     - urllib3 <1.25,>=1.23
   host:
+    - python
     - pip
   run:
     - python

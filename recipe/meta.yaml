@@ -42,7 +42,6 @@ test:
   commands:
     - py2neo 2>&1|grep py2neo
 
-
 about:
   home: http://py2neo.org/
   license: Apache-2.0

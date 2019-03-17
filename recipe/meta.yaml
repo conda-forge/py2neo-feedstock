@@ -16,7 +16,7 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - py2neo = py2neo.__main__:main
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -26,10 +26,10 @@ requirements:
     - python
     - click >=2.0
     - colorama
-    - neobolt <1.8,>=1.7.4
+    - neobolt <1.8,>=1.7.3
     - neotime <1.8,>=1.7.4
-    - prompt_toolkit ==1.0.15
-    - pygments >=2.0
+    - prompt_toolkit >=2.0.7
+    - pygments >=2.3.0
     - urllib3 >=1.21.1
 test:
   imports:

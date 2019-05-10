@@ -1,6 +1,6 @@
 {% set name = 'py2neo' %} 
-{% set version = "4.2.0" %}
-{% set sha256 = "c25d24a1504bbfaf61e862e29953f17ad67a4810d55531b1436ad0c7664d85fd" %}
+{% set version = "4.3.0" %}
+{% set sha256 = "a218ccb4b636e3850faa6b74ebad80f00600217172a57f745cf223d38a219222" %}
 
 package:
   name: {{ name }}
@@ -16,7 +16,7 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - py2neo = py2neo.__main__:main
-  number: 1
+  number: 0
 
 requirements:
   host:

@@ -1,6 +1,6 @@
-{% set name = 'py2neo' %} 
-{% set version = "4.2.0" %}
-{% set sha256 = "c25d24a1504bbfaf61e862e29953f17ad67a4810d55531b1436ad0c7664d85fd" %}
+{% set name = "py2neo" %} 
+{% set version = "2020.1.0" %}
+{% set sha256 = "b8516175af8484fcf65fc5bb98f9a6858654bb83b77e585006ca781fde583f4f" %}
 
 package:
   name: {{ name }}
@@ -13,10 +13,10 @@ source:
 
 build:
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - py2neo = py2neo.__main__:main
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -46,7 +46,7 @@ about:
   home: http://py2neo.org/
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Python client library and toolkit for Neo4j'
+  summary: Python client library and toolkit for Neo4j
 
 extra:
   recipe-maintainers:

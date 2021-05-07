@@ -16,7 +16,7 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - py2neo = py2neo.__main__:main
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -51,3 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - pvanheus
+    - marimeireles

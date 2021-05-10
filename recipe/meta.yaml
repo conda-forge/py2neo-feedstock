@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - click >=2.0
     - colorama
     - neobolt <1.8,>=1.7.3

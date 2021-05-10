@@ -31,6 +31,7 @@ requirements:
     - prompt_toolkit >=2.0.7
     - pygments >=2.3.0
     - urllib3 >=1.21.1
+    - english
 test:
   imports:
     - py2neo

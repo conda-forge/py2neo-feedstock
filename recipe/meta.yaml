@@ -1,6 +1,6 @@
 {% set name = "py2neo" %} 
-{% set version = "2021.1.1" %}
-{% set sha256 = "ffcf1add365c82ba557d1d9223960e8f35c0f27eee2730ec9a51ab60ef4a7aaa" %}
+{% set version = "2021.1.2" %}
+{% set sha256 = "de29736f81213e33f65d9e8b83d0ca72cdcc849faf674f968292a394d552587c" %}
 
 package:
   name: {{ name }}

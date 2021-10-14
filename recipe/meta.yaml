@@ -32,6 +32,7 @@ requirements:
     - pygments >=2.3.0
     - urllib3 >=1.21.1
     - english
+    - interchange
 test:
   imports:
     - py2neo

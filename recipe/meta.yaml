@@ -1,6 +1,6 @@
 {% set name = "py2neo" %} 
-{% set version = "2021.1.5" %}
-{% set sha256 = "ee059b05540b5b1423d89f54ca1477b8b65d9cc46f9a58480a8b51a105d0f59b" %}
+{% set version = "2021.2.3" %}
+{% set sha256 = "92bed6c03ed9c1068085c18e1f5af9313ddb25e9e441525cd856839a34c1e31a" %}
 
 package:
   name: {{ name }}
@@ -32,6 +32,7 @@ requirements:
     - pygments >=2.3.0
     - urllib3 >=1.21.1
     - english
+    - interchange
 test:
   imports:
     - py2neo
